@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>New Post - Posty</title>
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <header class="hero">
+        <h1>New Post</h1>
+        <a class="button-ghost" href="/">Back to posts</a>
+      </header>
+      <p class="subtitle">Write in Markdown and publish instantly.</p>
+
+      <form action="/new" method="POST">
+        <div class="field">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" required />
+        </div>
+        <div class="field">
+          <label for="content">Markdown Content</label>
+          <textarea id="content" name="content" rows="12" required></textarea>
+        </div>
+        <button type="submit">Publish</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

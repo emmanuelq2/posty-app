@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Posty</title>
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <header class="hero">
+        <h1>Posty</h1>
+        <div class="actions">
+          <a class="btn" href="/new">Write new post</a>
+        </div>
+      </header>
+      <p class="subtitle">A tiny Markdown blog with handmade vibes.</p>
+
+      <% if (!posts || posts.length === 0) { %>
+        <p class="notice">No posts yet. Create your first one to get the blog rolling.</p>
+      <% } else { %>
+        <ul class="post-grid">
+          <% posts.forEach(post => { %>
+            <li>
+              <a href="/post/<%= post.slug %>"><%= post.title %></a>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>
