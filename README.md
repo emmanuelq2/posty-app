@@ -1,65 +1,40 @@
-# Simple Node.js Blog App
+# Posty App
 
-This is a simple blog application built with Node.js and Express that serves Markdown posts from a designated folder. The application allows users to view a list of posts, read individual posts, and add new posts through a form.
-
-## Project Structure
-
-```
-posty
-├── posts
-│   └── welcome.md
-├── src
-│   ├── server.js
-│   ├── routes
-│   │   └── posts.js
-│   ├── views
-│   │   ├── index.ejs
-│   │   ├── post.ejs
-│   │   └── new.ejs
-│   └── utils
-│       └── markdown.js
-├── package.json
-├── README.md
-└── .gitignore
-```
-
-## Setup Instructions
-
-1. **Clone the repository**:
-   ```
-   git clone https://github.com/yourusername/posty.git
-   cd posty
-   ```
-
-2. **Install dependencies**:
-   ```
-   npm install
-   ```
-
-3. **Run the application**:
-   ```
-   npm start
-   ```
-
-4. **Access the application**:
-   Open your browser and navigate to `http://localhost:3000`.
+A lightweight Node.js blog app that reads Markdown files from the posts folder, renders them to HTML, and lets you publish new posts from a web form.
 
 ## Features
 
-- List all Markdown posts available in the `posts` folder.
-- View individual posts rendered from Markdown to HTML.
-- Add new posts using a simple form.
+- List all available posts from Markdown files.
+- Render individual posts with clean formatting.
+- Create new posts at /new and save them as .md files.
+- Includes a sample post in posts/welcome.md.
 
-## Sample Post
+## Quick Start
 
-The `posts/welcome.md` file contains a sample Markdown post that is served by the application. You can modify this file to add your own content.
+1. Install dependencies:
 
-## Dependencies
+```bash
+npm install
+```
 
-- Express: A web framework for Node.js.
-- EJS: A templating engine for rendering HTML views.
-- Markdown parsing library (e.g., marked or markdown-it) for converting Markdown to HTML.
+2. Start the server:
 
-## License
+```bash
+npm start
+```
 
-This project is licensed under the MIT License. Feel free to modify and use it as you wish.
+3. Open the app:
+
+http://localhost:3000
+
+## Tech Stack
+
+- Node.js
+- Express
+- EJS
+- marked
+
+## Notes
+
+- Markdown posts are stored in the posts directory.
+- New post titles are converted into URL slugs automatically.
