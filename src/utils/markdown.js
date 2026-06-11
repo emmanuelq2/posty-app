@@ -1,4 +1,7 @@
-const { marked } = require('marked');
+const markedModule = require('marked');
+const marked = typeof markedModule.parse === 'function'
+    ? markedModule
+    : markedModule.marked;
 
 function markdownToHtml(content) {
     return marked.parse(content || '');
